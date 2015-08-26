@@ -45,7 +45,7 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'blog',
     'pages',
-    'redactor',
+    #'redactor',
 )
 
 MIDDLEWARE_CLASSES = (

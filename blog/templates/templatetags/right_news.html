@@ -1,0 +1,16 @@
+<div class="head-side-bar"></div>
+<div class="news">
+    <h3><span>&bull;</span> Последние новости <span>&bull;</span></h3>
+</div>
+
+{% for post in posts %}
+<article class="right_news">
+    <a href="/blog/{{ post.url }}/"><h4>{{ post.title|truncatechars:55 }}</h4></a>
+    <span>
+        {{ post.text|safe|truncatewords_html:10 }}
+    </span>
+    <span>{{ post.date.date }}</span>
+    <div class="clear"></div>
+</article>
+<div class="clear"></div>
+{% endfor %}

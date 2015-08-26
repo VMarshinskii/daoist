@@ -1,0 +1,171 @@
+{% load right_news %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Daoist Consulting Center</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  
+    <script type="text/javascript" src="/static/js/jquery.1.7.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/script.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $(".subscribe a").click(function(){
+                $(".popupBackground").css('display', 'block');
+                $("#popupOrdre").css('display', 'block');
+
+                return false;
+            });
+
+            $(".ordre a").click(function(){
+                $(".popupBackground").css('display', 'block');
+                $("#popupNovosti").css('display', 'block');
+
+                return false;
+            });
+
+            $(".popupBackground").click(function(){
+                $(".popupBackground").css('display', 'none');
+                $("#popupOrdre").css('display', 'none');
+                $("#popupNovosti").css('display', 'none');
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+  <div id="wrapper">
+
+    <header>
+      <div class="logo left">
+        <img class="left" src="/static/img/logo.png" alt="logo">
+        <h1>Алёна Крупанова</h1>
+      </div>
+      <div class="head">
+        <div class="ordre right">
+          <h2>+7 900 123 456 78</h2>
+          <a href="#">Заказать звонок</a>
+        </div>
+        <div class="title right">
+          <h2>Daoist Consulting Center</h2>
+          <p>Традиционные китайские науки о жизни</p>
+        </div>
+        
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="/daosskij-podhod-k-zhizni/"><span>道</span><br><p>Даосский подход <br>к жизни</p></a></li>
+        <li><a href="/konsultacii/"><span>咨询</span><br><p>Консультации</p></a></li>
+        <li class="middle"><a href="/"><span>文章</span><br><p>Статьи</p></a></li>
+        <li><a href="/about/"><span>新闻</span><br><p>Обо мне (О центре)</p></a></li>
+        <li><a href="/kontakty/"><span>联系</span><br><p>Контакты</p></a></li>
+      </ul>
+    </nav>
+
+
+    <div id="content">
+      <section>
+      <div id="head-content"></div>
+          {% block content %}
+            <div class="item item-first">
+              <div class="text">
+                <h3><span>&bull;</span> Тайные врата Неба! <span>&bull;</span></h3>
+              </div>
+              <div class="img-left left">
+                <img src="/static/img/man.png" alt="man">
+              </div>
+              <div class="left">
+                <p>Возьми время себе в союзники- Цимэнь дуньцзя (奇門<br>遁甲 qímén dùnjiǎ)</p>
+                <a href="#">&bull; Подробнее &bull;</a>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="text">
+                <h3><span>&bull;</span> Жизнь и судьба человека! <span>&bull;</span></h3>
+              </div>
+              <div class="img-left left">
+                <img src="/static/img/woman.png" alt="man">
+              </div>
+              <div class="left">
+                <p>Жизнь одна – проживи её на 200 % -<br> Ба-цзы, На-инь, Цимэнь дуньцзя</p>
+                <a href="#">&bull; Подробнее &bull;</a>
+              </div>
+            </div>
+
+            <div class="item item-last">
+              <div class="text">
+               <h3><span>&bull;</span> Гармония и процветания в доме <span>&bull;</span></h3>
+              </div>
+              <div class="img-left left">
+                <img src="/static/img/home.png" alt="man">
+              </div>
+              <div class="left">
+                <p>Фэншуй – наука о гармонизации окружающего<br> пространства человека.</p>
+                <a href="#">&bull; Подробнее &bull;</a>
+              </div>
+            </div>
+            <div class="points clear">
+              <img src="/static/img/points-down.png" alt="points">
+            </div>
+          {% endblock %}
+      </section>
+
+      <div id="side-bar">
+
+        {% right_news %}
+
+        <div class="subscribe">
+          <a href="#">Подписаться на новости</a>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="clear">
+        <img src="/static/img/logo-footer.png" alt="logo">
+        <h1>Алёна Крупанова</h1>
+    </footer>
+        
+  </div>  
+
+  <div class="popupBackground"></div>
+
+    <div class="popupBox" id="popupOrdre">
+        <h3>Подписаться на новости</h3>
+
+        <form class="popup_form">
+            <div class="popup_form_item">
+                <input name="name" required type="text" placeholder="Ваше имя" maxlength="15">
+            </div>
+            <div class="popup_form_item">
+                <input name="email" required type="text" placeholder="Почта" maxlength="30">
+            </div>
+
+            <input type="button" name="sub" class="to_send" value="Подписаться">
+        </form>
+    </div>
+
+    <div class="popupBox" id="popupNovosti">
+        <h3>Заказать звонок</h3>
+
+        <form class="popup_form">
+            <div class="popup_form_item">
+                <input name="name" required type="text" placeholder="Ваше имя" maxlength="15">
+            </div>
+
+            <div class="popup_form_item telephone">
+                <input name="phone" required type="text" placeholder="Телефон" maxlength="30">
+            </div>
+
+            <input type="button" name="sub" class="to_send" value="Отправить заявку">
+        </form>
+    </div>
+
+</body>
+</html>

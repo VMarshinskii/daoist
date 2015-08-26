@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="item item-first item-last">
+        <div class="text">
+            <a href="/blog/{{ post.url }}/"><h3><span>&bull;</span> {{ post.title }} <span>&bull;</span></h3></a>
+        </div>
+        {% if post.image %}
+        <div class="img-left left">
+            <img src="/{{ post.image }}" alt="{{ post.title }}">
+        </div>
+        {% endif %}
+        <div class="left">
+            <span>{{ post.text|safe }}</span>
+        </div>
+    </div>
+
+    <div class="points clear">
+        <img src="/static/img/points-down.png" alt="points">
+    </div>
+{% endblock %}

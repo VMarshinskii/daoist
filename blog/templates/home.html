@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for post in posts %}
+    <div class="item {% if forloop.first %}item-first{% endif %}{% if forloop.last %}item-last{% endif %}">
+        <div class="text">
+            <a href="/blog/{{ post.url }}/"><h3><span>&bull;</span> {{ post.title }} <span>&bull;</span></h3></a>
+        </div>
+        {% if post.image %}
+        <div class="img-left left">
+            <img src="/{{ post.image }}" alt="{{ post.title }}">
+        </div>
+        {% endif %}
+        <div class="left">
+            <span>{{ post.text|safe|truncatewords_html:70 }}</span>
+            <a href="">&bull; Подробнее &bull;</a>
+        </div>
+    </div>
+    {% endfor %}
+
+    <div class="points clear">
+        <img src="/static/img/points-down.png" alt="points">
+    </div>
+{% endblock %}

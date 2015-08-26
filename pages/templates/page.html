@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="item item-first item-last">
+        <div class="text">
+            <a href="/blog/{{ page.url }}/"><h3><span>&bull;</span> {{ page.title }} <span>&bull;</span></h3></a>
+        </div>
+        <div class="left">
+            <span>{{ page.text|safe }}</span>
+        </div>
+    </div>
+
+    <div class="points clear">
+        <img src="/static/img/points-down.png" alt="points">
+    </div>
+{% endblock %}

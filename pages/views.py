@@ -8,3 +8,10 @@ def page_view(request, url):
         return render_to_response("page.html", {'page': page})
     except Page.DoesNotExist:
         raise Http404
+
+
+def about_view(request):
+    return render_to_response("about.html")
+
+def contacts_view(request):
+    return render_to_response("contacts.html")

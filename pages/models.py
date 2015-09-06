@@ -10,7 +10,6 @@ class Page(models.Model):
     text = RedactorField(verbose_name="Текст", redactor_options={'upload_to': 'static/uploads'})
     url = models.CharField("Url", max_length=200, unique=True)
     public = models.BooleanField("Опубликованно", default=False)
-    send = models.BooleanField(verbose_name="Разослать подписчикам", default=True)
     date = models.DateTimeField(verbose_name="Дата создания", auto_now_add=True)
 
     class Meta:

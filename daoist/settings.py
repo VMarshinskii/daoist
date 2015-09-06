@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'blog',
     'pages',
+    'consultations'
     #'redactor',
 )
 
@@ -119,4 +120,5 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
     os.path.join(BASE_DIR,  'blog/templates'),
     os.path.join(BASE_DIR,  'pages/templates'),
+    os.path.join(BASE_DIR,  'consultations/templates'),
 )

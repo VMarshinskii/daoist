@@ -6,9 +6,9 @@ def consultations_view(request):
     consultations = Consultation.objects.filter(public=True)
     return render_to_response("consultations.html", {'consultations': consultations})
 
-def consultation_view(request, consultation_id):
+def consultation_view(request, url):
     try:
-        consultation = Consultation.objects.get(id=consultation_id, public=True)
+        consultation = Consultation.objects.get(url=url, public=True)
         return render_to_response("consultation.html", {'consultation': consultation})
     except Consultation.DoesNotExist:
         raise Http404()

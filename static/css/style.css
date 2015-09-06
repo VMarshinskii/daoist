@@ -404,3 +404,65 @@ footer h1{
 .item .about_title h3 {
 	font-size: 16px;
 }
+
+.top_line {
+	background: url(../img/points.png) repeat-x center 11px;
+}
+.top_line .title {
+	display: inline-block;
+	background: #FFFBEE;
+	margin: 1px 0 0 20px;
+}
+.top_line .title span {
+	float: left;
+}
+.top_line .title h1 {
+	float: left;
+	font-size: 16px;
+	color: #000000;
+}
+
+.help_left_link {
+	float: right;
+	display: inline-block;
+	background: #FFFBEE;
+	margin: 1px 8px 0 0;
+}
+.help_left_link span {
+	float: left;
+}
+.help_left_link a {
+	float: left;
+	font-size: 16px;
+	color: #000000;
+	text-decoration: underline;
+	padding: 0 5px;
+}
+
+.counseling_article .preview {
+	width: 80px;
+	margin: 10px;
+	float: left;
+}
+.counseling_article .counseling_text {
+	float: left;
+    width: 610px;
+    min-height: 65px;
+	padding-bottom: 15px;
+    margin-top: 13px;
+	position: relative;
+	z-index: 100;
+}
+.counseling_article .counseling_text p {
+	font-size: 15px;
+}
+.counseling_article .counseling_text .bottom_line {
+	width: 100%;
+	height: 22px;
+	position: absolute;
+	bottom: 0;
+    background: url(../img/points.png) repeat-x center;
+}
+.counseling_article .counseling_text .bottom_line a {
+	font-size: 14px;
+}

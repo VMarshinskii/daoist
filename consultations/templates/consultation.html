@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block content %}
+    <div class="counseling">
+        <div class="top_line">
+            <div class="title">
+                <span>&bull;</span>
+                <h1>Консультирование</h1>
+                <span>&bull;</span>
+                <div style="clear: both"></div>
+            </div>
+
+            <div class="help_left_link">
+                <span>&bull;</span>
+                <a href="#">Задать вопрос</a>
+                <span>&bull;</span>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+
+        <div class="counseling_article">
+            <img class="preview" src="/static/img/consultation.png" alt=""/>
+            <div class="counseling_text">
+                <p style="font-weight: bold; font-size: 18px; margin-bottom: 15px">{{ consultation.title }}</p>
+                <p>{{ consultation.text }}</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </div>
+{% endblock %}

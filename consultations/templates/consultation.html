@@ -22,7 +22,7 @@
             <img class="preview" src="/{{ consultation.image }}" alt="{{ consultation.title }}"/>
             <div class="counseling_text">
                 <p style="font-weight: bold; font-size: 18px; margin-bottom: 15px">{{ consultation.title }}</p>
-                <p>{{ consultation.text }}</p>
+                <p>{{ consultation.text|safe }}</p>
             </div>
             <div class="clear"></div>
         </div>

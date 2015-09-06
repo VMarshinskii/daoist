@@ -8,6 +8,7 @@ class Consultation(models.Model):
     description = models.CharField("Описание", max_length=200, blank=True)
     keyword = models.CharField("Ключевые слова", max_length=200, blank=True)
     text = RedactorField(verbose_name="Ответ", redactor_options={'upload_to': 'static/uploads'}, blank=True)
+    image = models.ImageField(verbose_name="Изображение", upload_to='static/uploads', null=True)
     url = models.CharField("Url", max_length=200, unique=True, default="")
     public = models.BooleanField("Опубликованно", default=False)
     date_time = models.DateTimeField(verbose_name="Дата создания", auto_now_add=True)

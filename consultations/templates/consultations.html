@@ -20,7 +20,7 @@
 
         {% for consultation in consultations %}
         <div class="counseling_article">
-            <img class="preview" src="/static/img/consultation.png" alt=""/>
+            <img class="preview" src="/{{ consultation.image }}" alt="{{ consultation.title }}"/>
             <div class="counseling_text">
                 <p>{{ consultation.title }}</p>
                 <div class="bottom_line">

@@ -447,9 +447,9 @@ footer h1{
 .counseling_article .counseling_text {
 	float: left;
     width: 610px;
-    min-height: 65px;
+    min-height: 55px;
 	padding-bottom: 15px;
-    margin-top: 13px;
+    margin-top: 23px;
 	position: relative;
 	z-index: 100;
 }

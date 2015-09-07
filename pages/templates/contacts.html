@@ -7,16 +7,22 @@
         </div>
         <div class="left" style="float: left; height: 220px">
             <p style="padding: 5px 25px; font-size: 16px">Вы можете связаться со мной:</p>
-            <p style="padding: 3px 25px;">E-mail: alena@alena.com</p>
-            <p style="padding: 3px 25px;">Facebook: alena</p>
-            <p style="padding: 3px 25px;">Vkontakte: alena</p>
+            {% if settings.email %}
+            <p style="padding: 3px 25px;">E-mail: {{ settings.email }}</p>
+            {% endif %}
+            {% if settings.facebook %}
+            <p style="padding: 3px 25px;">Facebook: {{ settings.facebook }}</p>
+            {% endif %}
+            {% if settings.vk %}
+            <p style="padding: 3px 25px;">Vkontakte: {{ settings.vk }}</p>
+            {% endif %}
         </div>
 
         <div class="text about_title" style="clear: both">
             <a href="#"><h3><span>&bull;</span> Время работы <span>&bull;</span></h3></a>
         </div>
         <div class="left" style="clear: both; height: 120px">
-            <p style="padding: 3px 25px;">Ежедневно с 10:00 до 20:00 ч.</p>
+            <p style="padding: 3px 25px;">{{ settings.time_work }}</p>
         </div>
 
     </div>

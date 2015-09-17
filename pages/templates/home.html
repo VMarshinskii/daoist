@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="item item-first item-last">
+        <div class="text">
+            <a href="/blog/{{ post.url }}/"><h3><span>&bull;</span> Классические китайские науки о жизни  <span>&bull;</span></h3></a>
+        </div>
+    </div>
+
+    <div class="home_tile">
+        <img src="/static/img/in_yan.png" alt="Классические китайские науки о жизни" class="in_yan"/>
+    
+        <a href="/duh/" class="tile_item tile_spirit">
+            <img src="/static/img/home_image_4.png" alt="Дух ДаоИнь"/>
+            <h3>&bull; Дух &bull;</h3>
+            <span>ДаоИнь</span>
+        </a>
+
+        <a href="/telo/" class="tile_item tile_body">
+            <img src="/static/img/home_image_5.png" alt="Цигун, Ушу"/>
+            <h3>&bull; Тело &bull;</h3>
+            <span>Цигун, Ушу</span>
+        </a>
+
+        <a href="/chelovek/" class="tile_item tile_people">
+            <img src="/static/img/home_image_1.png" alt="Бацзы"/>
+            <h3>&bull; Человек &bull;</h3>
+            <span>Бацзы</span>
+        </a>
+
+        <a href="/dom/" class="tile_item tile_home">
+            <img src="/static/img/home_image_2.png" alt="Фэншуй"/>
+            <h3>&bull; Дом &bull;</h3>
+            <span>Фэншуй</span>
+        </a>
+
+        <a href="/strategii/" class="tile_item tile_strategy">
+            <img src="/static/img/home_image_2.png" alt="Цимень Дуньцзя"/>
+            <h3>&bull; Вопросы и стратегии &bull;</h3>
+            <span>Цимень Дуньцзя</span>
+        </a>
+    </div>
+
+    <div class="points clear">
+        <img src="/static/img/points-down.png" alt="points">
+    </div>
+{% endblock %}

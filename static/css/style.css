@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'book_antiquaregular';
+    src: url('/static/fonts/bkant-webfont.eot');
+    src: url('/static/fonts/bkant-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/bkant-webfont.woff2') format('woff2'),
+         url('/static/fonts/bkant-webfont.woff') format('woff'),
+         url('/static/fonts/bkant-webfont.ttf') format('truetype'),
+         url('/static/fonts/bkant-webfont.svg#book_antiquaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -108,11 +120,65 @@ section{
 	-ms-border-radius: 6px;
 	-o-border-radius: 6px;
 }
+.error_label {
+	font-size: 14px;
+    font-family: sans-serif;
+    color: #F00;
+}
 #head-content{
 	height: 50px;
 	background: url(../img/section.png) no-repeat center top;
 	margin-bottom: -36px;
 }
+
+.home_tile {
+	position: relative;
+	height: 700px;
+}
+.home_tile .in_yan {
+	position: absolute;
+	top: 250px;
+	left: 268px;
+}
+.home_tile .tile_item {
+	width: 	200px;
+	position: absolute;
+	text-align: center;
+}
+.home_tile .tile_item img {
+	margin: 0 auto;
+}
+.home_tile .tile_item h3 {
+	color: #8c3062;
+	font-size: 16px;
+}
+.home_tile .tile_item:hover span{
+	text-decoration: underline;
+}
+.home_tile .tile_item span {
+	color: #1b393d;
+}
+.tile_spirit {
+	top: 33px;
+	left: 267px;
+}
+.tile_body {
+	top: 160px;
+    left: 492px;
+}
+.tile_people {
+	top: 447px;
+    left: 438px;
+}
+.tile_home {
+	top: 447px;
+    left: 97px;
+}
+.tile_strategy {
+	top: 160px;
+    left: 50px;
+}
+
 .item{
 	clear: both;
 }
@@ -333,6 +399,11 @@ footer h1{
     letter-spacing: 1px;
 }
 
+.form_thanks {
+	margin: 5px 20px;
+	font-size: 15px;
+}
+
 .popup_form {
     margin: 20px 25px;
 }
@@ -465,4 +536,54 @@ footer h1{
 }
 .counseling_article .counseling_text .bottom_line a {
 	font-size: 14px;
+}
+
+.reviews_article {
+	margin: 15px;
+}
+
+.review {
+	padding: 10px 0;
+	font-family: 'book_antiquaregular';
+	background: url("/static/img/points-down.png") no-repeat bottom;
+}
+.review h3 {
+	font-size: 18px;
+}
+.review .date_time {
+	font-size: 14px;
+	color: #6E6E6E;
+}
+
+
+.errorlist {
+	color: #FF0000;
+}
+
+.content_form {
+	margin: 15px 30px;
+}
+.table_form th {
+	text-align: left;
+    width: 150px;
+	font-family: 'book_antiquaregular';
+	color: #333;
+	font-size: 16px;
+	vertical-align: top;
+}
+.table_form input[type="text"],
+.table_form input[type="email"],
+.table_form textarea {
+	padding: 5px;
+    width: 286px;
+    border-radius: 1px;
+    background-color: #fff;
+    border: 1px solid #BBBABA;
+}
+.table_form textarea {
+	height: 60px;
+}
+.table_form input[type="submit"] {
+	padding: 3px 5px;
+	cursor: pointer;
 }

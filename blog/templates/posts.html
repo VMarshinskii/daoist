@@ -13,7 +13,7 @@
         {% endif %}
         <div class="left">
             <span>{{ post.text|safe|truncatewords_html:70 }}</span>
-            <a href="">&bull; Подробнее &bull;</a>
+            <a href="/blog/{{ post.url }}/">&bull; Подробнее &bull;</a>
         </div>
     </div>
     {% endfor %}

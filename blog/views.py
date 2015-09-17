@@ -2,9 +2,9 @@ from django.shortcuts import render_to_response, Http404
 from models import Post
 
 
-def home_view(request):
+def posts_view(request):
     posts = Post.objects.filter(public=True)
-    return render_to_response("home.html", {'posts': posts})
+    return render_to_response("posts.html", {'posts': posts})
 
 def post_view(request, url):
     try:

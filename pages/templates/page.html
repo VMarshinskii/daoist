@@ -5,6 +5,11 @@
         <div class="text">
             <a href="/blog/{{ page.url }}/"><h3><span>&bull;</span> {{ page.title }} <span>&bull;</span></h3></a>
         </div>
+        {% if page.image %}
+        <div class="img-left left">
+            <img src="/{{ page.image }}" alt="{{ page.title }}">
+        </div>
+        {% endif %}
         <div class="left">
             <span>{{ page.text|safe }}</span>
         </div>

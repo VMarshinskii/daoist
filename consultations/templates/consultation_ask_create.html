@@ -18,13 +18,17 @@
             </div>
         </div>
 
-        <div class="counseling_article">
-            <img class="preview" src="/{{ consultation.image }}" alt="{{ consultation.title }}"/>
-            <div class="counseling_text">
-                <p style="font-weight: bold; font-size: 18px; margin-bottom: 15px">{{ consultation.title }}</p>
-                <p>{{ consultation.text|safe }}</p>
-            </div>
-            <div class="clear"></div>
+        <div class="content_form">
+            <form action="/consultations/ask/" method="post">
+                <table class="table_form">
+                    {% csrf_token %}
+                    {{ form }}
+                    <tr>
+                        <th></th>
+                        <td><input type="submit" value="Задать вопрос" /></td>
+                    </tr>
+                </table>
+            </form>
         </div>
 
     </div>

@@ -13,22 +13,22 @@
 
             $(".subscribe a").click(function(){
                 $(".popupBackground").css('display', 'block');
-                $("#popupOrdre").css('display', 'block');
+                $("#subscription").css('display', 'block');
 
                 return false;
             });
 
             $(".ordre a").click(function(){
                 $(".popupBackground").css('display', 'block');
-                $("#popupNovosti").css('display', 'block');
+                $("#order_phone").css('display', 'block');
 
                 return false;
             });
 
             $(".popupBackground").click(function(){
                 $(".popupBackground").css('display', 'none');
-                $("#popupOrdre").css('display', 'none');
-                $("#popupNovosti").css('display', 'none');
+                $("#subscription").css('display', 'none');
+                $("#order_phone").css('display', 'none');
             });
 
         });
@@ -40,10 +40,10 @@
   <div id="wrapper">
 
     <header>
-      <div class="logo left">
+      <a href="/" class="logo left">
         <img class="left" src="/static/img/logo.png" alt="logo">
         <h1>Алёна Крупанова</h1>
-      </div>
+      </a>
       <div class="head">
         <div class="ordre right">
           <h2>+7 900 123 456 78</h2>
@@ -59,9 +59,9 @@
 
     <nav>
       <ul>
-        <li><a href="/daosskij-podhod-k-zhizni/"><span>道</span><br><p>Даосский подход <br>к жизни</p></a></li>
+        <li><a href="/"><span>道</span><br><p>Даосский подход <br>к жизни</p></a></li>
         <li><a href="/consultations/"><span>咨询</span><br><p>Консультации</p></a></li>
-        <li class="middle"><a href="/"><span>文章</span><br><p>Статьи</p></a></li>
+        <li class="middle"><a href="/blog/"><span>文章</span><br><p>Статьи</p></a></li>
         <li><a href="/about/"><span>新闻</span><br><p>Обо мне (О центре)</p></a></li>
         <li><a href="/contacts/"><span>联系</span><br><p>Контакты</p></a></li>
       </ul>
@@ -136,7 +136,7 @@
 
   <div class="popupBackground"></div>
 
-    <div class="popupBox" id="popupOrdre">
+    <div class="popupBox" id="subscription">
         <h3>Подписаться на новости</h3>
 
         <form class="popup_form">
@@ -151,7 +151,7 @@
         </form>
     </div>
 
-    <div class="popupBox" id="popupNovosti">
+    <div class="popupBox" id="order_phone">
         <h3>Заказать звонок</h3>
 
         <form class="popup_form">

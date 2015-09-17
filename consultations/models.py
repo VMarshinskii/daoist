@@ -19,3 +19,24 @@ class Consultation(models.Model):
 
     def __unicode__(self):
         return self.title
+
+
+class ConsultationAsk(models.Model):
+    name = models.CharField(verbose_name="Имя", max_length=200)
+    profession = models.CharField(verbose_name="Профессия", max_length=200, blank=True)
+    age = models.CharField(verbose_name="Возраст", max_length=200, blank=True)
+    email = models.EmailField(verbose_name="Email для ответа")
+    text = models.TextField(verbose_name="Вопрос")
+    date_time = models.DateTimeField(verbose_name="Дата и время", auto_now_add=True)
+    viewed = models.BooleanField(verbose_name="Просмотрено", default=False)
+
+    class Meta:
+        verbose_name_plural = "Вопросы"
+        verbose_name = "Вопрос"
+
+    def __unicode__(self):
+        return self.name + ", " + self.profession + ", " + self.age
+
+    def get_date_time(self):
+        return str(self.date_time.date()) + " " + str(self.date_time.time().hour) + ":" + str(self.date_time.time().minute)
+

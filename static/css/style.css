@@ -181,7 +181,6 @@ section{
 
 .item{
 	clear: both;
-	min-height: 130px;
 }
 .item:first-child{
 	margin-top: 15px;

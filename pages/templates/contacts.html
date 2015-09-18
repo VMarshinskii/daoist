@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+{% block hader %}
+<title>Контакты | Daoist Consulting Center</title>
+<meta name="keywords" content="Контакты">
+<meta name="description" content="Контакты">
+{% endblock %}
+
 {% block content %}
     <div class="item item-first item-last">
         <div class="text about_title" style="margin-top: 20px">
@@ -27,7 +33,5 @@
 
     </div>
 
-    <div class="points clear">
-        <img src="/static/img/points-down.png" alt="points">
-    </div>
+    <a href="/reviews/" class="footer_reviews clear"></a>
 {% endblock %}

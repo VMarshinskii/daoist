@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+{% block hader %}
+<title>Блог | Daoist Consulting Center</title>
+<meta name="keywords" content="Блог, Daoist Consulting Center">
+<meta name="description" content="Блог | Daoist Consulting Center">
+{% endblock %}
+
 {% block content %}
     {% for post in posts %}
     <div class="item {% if forloop.first %}item-first{% endif %}{% if forloop.last %}item-last{% endif %}">

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.shortcuts import render_to_response, Http404, HttpResponse
 from models import Page, CATEGORIES_CHOICES
 from my_admin.models import SiteSettings
@@ -17,8 +18,18 @@ def pages_view(request, categ_url):
 
 def page_in_categ_view(request, categ_url, url):
     try:
+        categories = {
+            'duh': 'Дух',
+            'telo': 'Тело',
+            'chelovek': 'Человек',
+            'dom': 'Дом',
+            'strategii': 'Вопросы и стратегии',
+        }
         page = Page.objects.get(url=url, public=True, category=categ_url)
-        return render_to_response("page.html", {'page': page})
+        return render_to_response("page.html", {
+            'page': page,
+            'category': categories[categ_url]
+        })
     except Page.DoesNotExist:
         raise Http404()
 

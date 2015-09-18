@@ -6,8 +6,6 @@
   <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% endblock %}"/>
   <link rel="stylesheet" type="text/css" href="{% static 'suit/bootstrap/css/bootstrap.min.css' %}" media="all"/>
   <link rel="stylesheet" type="text/css" href="{% static 'suit/css/suit.css' %}" media="all">
-  <link rel="stylesheet" type="text/css" media="screen" href="{% static "css/jquery.tokenize.css" %}" />
-  <link rel="stylesheet" type="text/css" media="screen" href="/static/css/styles_sprite.css" />
   {% block extrastyle %}{% endblock %}
   {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}"/>{% endif %}
   <script type="text/javascript">window.__admin_media_prefix__ = "{% filter escapejs %}{% static "admin/" %}{% endfilter %}";</script>
@@ -20,10 +18,6 @@
   {% block extrahead %}{% endblock %}
   {% block blockbots %}
     <meta name="robots" content="NONE,NOARCHIVE"/>{% endblock %}
-  <script type="text/javascript" src="/static/js/jquery.tokenize.js"></script>
-  <script type="text/javascript" src="/static/js/dropzone.js"></script>
-  <script type="text/javascript" src="/static/js/video216-1210.js"></script>
-  <script type="text/javascript" src="/static/js/uppod-0.5.24.js"></script>
   <script type="text/javascript" src="/static/js/admin.js"></script>
 </head>
 {% load i18n %}

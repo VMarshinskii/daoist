@@ -11,7 +11,6 @@ class Post(models.Model):
     image = models.ImageField(verbose_name="Изображение", upload_to='static/uploads', blank=True)
     url = models.CharField("Url", max_length=200, unique=True)
     public = models.BooleanField("Опубликованно", default=False)
-    send = models.BooleanField(verbose_name="Разослать подписчикам", default=True)
     date = models.DateTimeField(verbose_name="Дата создания", auto_now_add=True)
 
     class Meta:
@@ -20,3 +19,8 @@ class Post(models.Model):
 
     def __unicode__(self):
         return self.title
+
+    def get_link(self):
+        return '<a target="_blank" href="/blog/' + self.url + '/">' + self.url + '</a>'
+    get_link.allow_tags = True
+    get_link.short_description = 'Ссылка'

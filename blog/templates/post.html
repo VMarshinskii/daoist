@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+{% block hader %}
+<title>{{ post.title }} | Daoist Consulting Center</title>
+<meta name="keywords" content="{{ post.keyword }}">
+<meta name="description" content="{{ post.description }}">
+{% endblock %}
+
 {% block content %}
     <div class="item item-first item-last">
         <div class="text">

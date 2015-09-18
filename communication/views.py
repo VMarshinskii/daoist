@@ -5,6 +5,7 @@ from django.template.context_processors import csrf
 from models import PhoneOrder, Subscriber, Reviews
 from StringIO import StringIO
 import simplejson as json
+from pyunisend import PyUniSend
 
 
 def create_phone_order_view(request):
@@ -54,6 +55,15 @@ def add_subscriber_view(request):
         if response['errors'] == 0:
             subscriber = Subscriber(name=name, email=email)
             subscriber.save()
+
+            api = PyUniSend('5wy7awr4cunj36qds3e565bi4xi5wmzy57kzw9wo')
+            # 5715758, 5715742
+            result = api.subscribe(list_ids='5715742', fields={
+                'email': subscriber.email,
+                'Name': subscriber.name.encode("UTF-8")
+            }, double_optin=1)
+
+            print result
 
         return HttpResponse(json.dumps(response))
 

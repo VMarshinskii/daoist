@@ -58,7 +58,7 @@ def add_subscriber_view(request):
 
             api = PyUniSend('5wy7awr4cunj36qds3e565bi4xi5wmzy57kzw9wo')
             # 5715758, 5715742
-            result = api.subscribe(list_ids='5715742', fields={
+            result = api.subscribe(list_ids='5715758', fields={
                 'email': subscriber.email,
                 'Name': subscriber.name.encode("UTF-8")
             }, double_optin=1)
